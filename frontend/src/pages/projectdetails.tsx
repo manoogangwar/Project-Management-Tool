@@ -15,7 +15,7 @@ export default function ProjectDetails() {
     try {
       setLoading(true);
       const res = await getTasks(id!);
-      setTasks(res.data);
+      setTasks(res.data.results);
     } catch (error) {
       console.log(error);
     } finally {
