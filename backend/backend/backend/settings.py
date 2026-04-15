@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["backend-orap.onrender.com"]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://project-management-tool-cyan-eight.vercel.app/"
+]
 
 # Application definition
 
@@ -140,3 +143,7 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://project-management-tool-cyan-eight.vercel.app/"
+]
