@@ -1,13 +1,13 @@
 import API from "./axios";
 
-export const getProjects = (page: number = 1, search: string = "") => 
-  API.get(`/projects/?page=${page}&search=${search}`);
+export const getProjects = (page: number = 1, search: string = "") =>
+  API.get(`/api/projects/?page=${page}&search=${search}`);
 
 export const createProject = (data: any) =>
-  API.post("/projects/", data);
+  API.post("/api/projects/", data);
 
 export const updateProject = (id: number, data: any) =>
-  API.put(`/projects/${id}/`, data);
+  API.put(`/api/projects/${id}/`, data);
 
 export const deleteProject = (id: number) =>
-  API.delete(`/projects/${id}/`);
+  API.delete(`/api/projects/${id}/`);
