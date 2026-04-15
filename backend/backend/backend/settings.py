@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$piw(b8#nzk9b&#u&$z_o68o1*4zfwfuos@_c-#s4xtx&8!xsm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["backend-orap.onrender.com"]
 
 
 # Application definition
