@@ -62,11 +62,11 @@ export default function ProjectDetails() {
       </nav>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
           <h2 className="text-3xl font-bold text-slate-800 tracking-tight">Project Tasks</h2>
           <button 
             onClick={() => { setEditingTask(null); setShowForm(!showForm); }}
-            className="px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium shadow-sm shadow-purple-200 transition-all active:scale-95"
+            className="w-full sm:w-auto px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium shadow-sm shadow-purple-200 transition-all active:scale-95 text-center"
           >
             {showForm ? "Close Form" : "+ New Task"}
           </button>

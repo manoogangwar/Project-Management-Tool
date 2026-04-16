@@ -65,7 +65,7 @@ export default function Dashboard() {
       <nav className="bg-indigo-900 border-b border-indigo-800 sticky top-0 z-10 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
-            <h1 className="text-xl font-bold text-white tracking-tight">Project<span className="text-indigo-400">Sphere</span></h1>
+            <h1 className="text-xl font-bold text-white tracking-tight">Management<span className="text-indigo-400">Tool</span></h1>
             <button onClick={handleLogout} className="text-sm font-medium text-indigo-200 hover:text-white transition-colors bg-white/5 py-1.5 px-3 rounded-md">Log out</button>
           </div>
         </div>
@@ -75,17 +75,17 @@ export default function Dashboard() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
           <h2 className="text-3xl font-bold text-slate-800 tracking-tight">My Projects</h2>
           
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
             <input 
               type="text" 
               placeholder="Search projects..." 
               value={search}
               onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-              className="px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 min-w-[250px]"
+              className="px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 w-full sm:min-w-[250px]"
             />
             <button 
               onClick={() => { setEditingProject(null); setShowForm(!showForm); }}
-              className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium shadow-sm shadow-indigo-200 transition-all whitespace-nowrap"
+              className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium shadow-sm shadow-indigo-200 transition-all whitespace-nowrap w-full sm:w-auto text-center"
             >
               {showForm ? "Close Form" : "+ New Project"}
             </button>

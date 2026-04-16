@@ -63,18 +63,18 @@ export default function ProjectForm({ project, onSuccess, onCancel }: Props) {
           />
           {errors.description && <span className="text-red-500 text-xs mt-1">{errors.description.message}</span>}
         </div>
-        <div className="flex justify-end gap-3 pt-2">
+        <div className="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
           <button
             type="button"
             onClick={onCancel}
-            className="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors font-medium"
+            className="w-full sm:w-auto px-4 py-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors font-medium border border-slate-200 sm:border-transparent text-center"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed shadow-sm shadow-indigo-200"
+            className="w-full sm:w-auto px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed shadow-sm shadow-indigo-200 text-center"
           >
             {isSubmitting ? "Saving..." : project ? "Update Project" : "Create Project"}
           </button>
