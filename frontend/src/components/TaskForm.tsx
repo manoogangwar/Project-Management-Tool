@@ -83,7 +83,7 @@ export default function TaskForm({ projectId, task, onSuccess, onCancel }: Props
             <input
               type="date"
               {...register("due_date", { required: "Due date is required" })}
-              className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 text-slate-700 ${errors.due_date ? 'border-red-500' : 'border-slate-300'}`}
+              className={`block w-full min-w-0 bg-white appearance-none px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 text-slate-700 ${errors.due_date ? 'border-red-500' : 'border-slate-300'}`}
             />
             {errors.due_date && <span className="text-red-500 text-xs mt-1">{errors.due_date.message}</span>}
           </div>
